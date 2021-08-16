@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <file
+          source_path="D:\Тест Копирования\1"
+          destination_path="D:\Тест Копирования\2"
+          file_name="Файл1.txt"
+    />
+  <file
+          source_path="D:\Тест Копирования\1"
+          destination_path="D:\Тест Копирования\2"
+          file_name="Файл2.txt"
+    />
+  <file
+          source_path="D:\Тест Копирования\1"
+          destination_path="D:\Тест Копирования\2"
+          file_name="Файл3.txt"
+    />
+</config>
+
