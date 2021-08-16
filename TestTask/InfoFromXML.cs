@@ -1,4 +1,6 @@
-﻿using System.Xml;
+﻿using System;
+using System.IO;
+using System.Xml;
 
 namespace TestTask
 {
@@ -10,8 +12,12 @@ namespace TestTask
         /// </summary>     
         public static string[,] Readxml(string DirectoryFileConfig)
         {
+            if (!File.Exists(DirectoryFileConfig))
+            {
+                throw new Exception("Не удалось найти указанный файл конфигурации");
+            }
             XmlDocument XmlDoc = new XmlDocument();
-            XmlDoc.Load(DirectoryFileConfig);           
+            XmlDoc.Load(DirectoryFileConfig);               
             XmlElement XmlRoot = XmlDoc.DocumentElement;// получение корневога элемента
             string[,] DataMatrix = new string[XmlRoot.ChildNodes.Count, XmlRoot.ChildNodes.Count];//1-й столбец откуда копировать; 2-й столбец-куда
             int i = 0;//строка матрицы
