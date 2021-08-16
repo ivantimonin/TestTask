@@ -10,8 +10,7 @@ namespace TestTask
     {
         static void Main()
         {
-            string DirectoryFileConfig = @"D:\2УРОКИ С#\TestTask\TestTask\Config.xml";//указание директории файла-конфигурации
-
+            string DirectoryFileConfig = @"D:\УРОКИ С#\TestTask\TestTask\Config.xml";//указание директории файла-конфигурации
             string[,] DataMatrix = InfoFromXML.Readxml(DirectoryFileConfig);//чтение файла-конфигурации          
             CopyAction.CopyFiles(DataMatrix);//копирование файлов согласно файла-конфигурации
             Console.Read();
